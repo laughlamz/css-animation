@@ -1,0 +1,27 @@
+body{
+	width: 100%;
+}
+
+#popup{
+	background: green;
+	width: 300px;
+	height: 150px;
+	position: relative;
+	margin: 0 auto;
+	animation: drop 1s ease-out forwards,
+			   swing 1.5s 2s ease-out forwards;
+	transform-origin: 10px 10px;
+}
+
+@keyframes drop {
+	0%{ opacity: 0; transform: translateY(-200px); }
+	70%{ opacity: 0.7; transform: translateY(250px); }
+	100%{ opacity: 1; transform: translateY(200px); }
+}
+
+@keyframes swing {
+	0%{ transform: translateY(200px) rotate(0deg); }
+	40%{ transform: translateY(200px) rotate(90deg); }
+	70%{ transform: translateY(200px) rotate(70deg); }
+	100%{ transform: translateY(200px) rotate(75deg); }
+}
